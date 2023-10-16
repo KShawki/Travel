@@ -1,6 +1,7 @@
 import { NAV_LINKS } from '@/constants/constant.index';
 import Image from 'next/image';
 import Link from 'next/link';
+import Button from './Button';
 
 const Navbar = () => {
   return (
@@ -15,7 +16,22 @@ const Navbar = () => {
           </li>
         ))}
       </ul>
-      <div>2</div>
+      <div className='hidden lg:flexCenter'>
+        <Button
+          type='button'
+          title='Login'
+          icon='/user.svg'
+          variant='btn_dark_green'
+        />
+      </div>
+
+      <Image 
+        src='/menu.svg'
+        width={32}
+        height={32}
+        alt='menu'
+        className='inline-block cursor-pointer lg:hidden '
+      />
     </nav>
   );
 };
