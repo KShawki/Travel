@@ -31,6 +31,7 @@ const CampSite = (props: CampSiteProps) => {
           <span className='flex -space-x-4 overflow-hidden'>
             {PEOPLE_URL.map((people, index) => (
               <Image
+                className='inline-block w-10 h-10 rounded-full'
                 key={index}
                 src={people}
                 width={52}
@@ -76,7 +77,13 @@ const Camp = () => {
             That's why we are here for those of you who want to start an
             adventure
           </p>
-          <Image src='/quote.svg' alt='qoute' width={186} height={219} className='absolute -bottom-5 right-0' />
+          <Image
+            src='/quote.svg'
+            alt='qoute'
+            width={186}
+            height={219}
+            className='absolute -bottom-5 right-0'
+          />
         </div>
       </div>
     </section>
